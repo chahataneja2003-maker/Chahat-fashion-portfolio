@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chahat Aneja — Product Development & Creative Head | Knitwear Specialist</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        taupe: {
+                            bg: '#E6DCD0',
+                            card: '#F2ECE4',
+                            border: '#D6CEC2',
+                            dark: '#C8BCAE'
+                        },
+                        burgundy: {
+                            DEFAULT: '#5A0E17',
+                            dark: '#4A0404',
+                            light: '#7A1C28',
+                            muted: '#8C3B44'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #E6DCD0;
+            color: #4A0404;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .bento-card {
+            background-color: #F2ECE4;
+            border: 1px solid #D6CEC2;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px -10px rgba(90, 14, 23, 0.12);
+            border-color: #8C3B44;
+        }
+        /* Custom floating fabric particles background animation */
+        @keyframes floatParticle {
+            0% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 0.6; }
+            100% { transform: translateY(0px) rotate(360deg); opacity: 0.3; }
+        }
+        .floating-element {
+            position: absolute;
+            pointer-events: none;
+            animation: floatParticle 8s ease-in-out infinite;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #E6DCD0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8C3B44;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="relative selection:bg-burgundy selection:text-white">
+
+    <!-- Floating Background Thread/Fabric Elements -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-40">
+        <div class="floating-element text-burgundy/20 text-3xl top-[10%] left-[5%]" style="animation-delay: 0s;"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <div class="floating-element text-burgundy/20 text-4xl top-[25%] right-[8%]" style="animation-delay: 2s;"><i class="fa-solid fa-feather"></i></div>
+        <div class="floating-element text-burgundy/20 text-3xl top-[65%] left-[10%]" style="animation-delay: 4s;"><i class="fa-solid fa-shirt"></i></div>
+        <div class="floating-element text-burgundy/20 text-5xl top-[80%] right-[15%]" style="animation-delay: 1s;"><i class="fa-solid fa-spa"></i></div>
+    </div>
+
+    <!-- Toast Notification Box (Replaces alert) -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 bg-burgundy text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3 border border-burgundy-light">
+        <i class="fa-solid fa-circle-check text-xl text-amber-200"></i>
+        <div>
+            <h4 class="font-semibold text-sm">Notification</h4>
+            <p id="toast-message" class="text-xs text-amber-100">Action completed successfully.</p>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 relative z-10">
+
+        <!-- Top Navigation Widget -->
+        <header class="bento-card rounded-3xl p-4 sm:p-6 mb-8 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-sm">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-full bg-burgundy text-white flex items-center justify-center font-serif font-bold text-xl shadow-md">
+                    CA
+                </div>
+                <div>
+                    <h1 class="font-serif font-bold text-lg sm:text-xl text-burgundy">Chahat Aneja</h1>
+                    <p class="text-xs uppercase tracking-widest text-burgundy/75 font-semibold">NIFT Hyderabad • Batch 2021–2025</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-2 sm:gap-4 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0 justify-center">
+                <a href="mailto:chahataneja2003@gmail.com" class="px-4 py-2 rounded-full bg-burgundy text-white text-xs font-medium hover:bg-burgundy-dark transition flex items-center gap-2 shadow-sm">
+                    <i class="fa-solid fa-envelope"></i> Email Me
+                </a>
+                <a href="https://linkedin.com/in/chahat-aneja-b6397b229" target="_blank" class="px-4 py-2 rounded-full bg-taupe-border text-burgundy text-xs font-medium hover:bg-burgundy hover:text-white transition flex items-center gap-2 shadow-sm">
+                    <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+                </a>
+                <a href="#game-section" class="px-4 py-2 rounded-full bg-amber-900 text-amber-100 text-xs font-medium hover:bg-amber-950 transition flex items-center gap-2 shadow-sm">
+                    <i class="fa-solid fa-gamepad"></i> Fiber Mini-Game
+                </a>
+            </div>
+        </header>
+
+        <!-- Bento Grid Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <!-- Column 1: Profile Hero & Core Specialisation -->
+            <div class="lg:col-span-1 flex flex-col gap-6">
+                
+                <!-- Hero Card -->
+                <div class="bento-card rounded-3xl p-6 sm:p-8 relative overflow-hidden flex flex-col items-center text-center">
+                    <div class="absolute -top-12 -right-12 w-32 h-32 bg-burgundy/10 rounded-full blur-2xl pointer-events-none"></div>
+                    
+                    <!-- Profile Picture Circle Badge -->
+                    <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-full p-1.5 bg-gradient-to-tr from-amber-700 via-burgundy to-burgundy-dark mb-5 shadow-xl relative group flex items-center justify-center">
+                        <div class="w-full h-full rounded-full overflow-hidden border-2 border-amber-600/40 bg-burgundy flex items-center justify-center">
+                            <img src="input_file_0.png" alt="Chahat Aneja" class="w-full h-full object-cover rounded-full transform transition duration-500 group-hover:scale-105" onerror="this.src='input_file_1.png'">
+                        </div>
+                    </div>
+
+                    <h2 class="font-serif font-bold text-2xl sm:text-3xl text-burgundy mb-2">Chahat Aneja</h2>
+                    <p class="text-xs font-semibold uppercase tracking-wider text-burgundy/80 mb-4 bg-taupe-border/50 px-3 py-1 rounded-full">Product Development & Creative Head</p>
+                    
+                    <p class="text-xs sm:text-sm text-burgundy/90 leading-relaxed mb-6">
+                        Fashion professional with end-to-end product development expertise. Specialist in knitwear bridging the gap between creative vision and production precision.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-3 w-full border-t border-taupe-border pt-4">
+                        <div class="bg-taupe-bg p-3 rounded-2xl text-center">
+                            <span class="block font-serif font-bold text-xl text-burgundy">100%</span>
+                            <span class="text-[10px] uppercase font-semibold text-burgundy/70">End-to-End Ownership</span>
+                        </div>
+                        <div class="bg-taupe-bg p-3 rounded-2xl text-center">
+                            <span class="block font-serif font-bold text-xl text-burgundy">80%+</span>
+                            <span class="text-[10px] uppercase font-semibold text-burgundy/70">Fan Approval Rate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Knitwear Specialisation Card -->
+                <div class="bento-card rounded-3xl p-6 sm:p-8">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-burgundy">Knitwear Specialisation</h3>
+                    </div>
+                    
+                    <p class="text-xs text-burgundy/80 mb-4">Strong command of fibre blends, fabric construction, finishes, and GSM calculation for export and boutique labels.</p>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-burgundy/10 text-burgundy px-3 py-1.5 rounded-xl font-medium">Organic Cotton</span>
+                        <span class="text-xs bg-burgundy/10 text-burgundy px-3 py-1.5 rounded-xl font-medium">Lyocell Blends</span>
+                        <span class="text-xs bg-burgundy/10 text-burgundy px-3 py-1.5 rounded-xl font-medium">Hemp & Bamboo</span>
+                        <span class="text-xs bg-burgundy/10 text-burgundy px-3 py-1.5 rounded-xl font-medium">GSM & Finishes</span>
+                        <span class="text-xs bg-burgundy/10 text-burgundy px-3 py-1.5 rounded-xl font-medium">Suvin Cotton</span>
+                    </div>
+                </div>
+
+                <!-- Education Card -->
+                <div class="bento-card rounded-3xl p-6 sm:p-8">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-burgundy">Education</h3>
+                    </div>
+                    
+                    <div class="border-l-2 border-burgundy/30 pl-4 space-y-1">
+                        <h4 class="font-semibold text-sm text-burgundy">B.Des in Knitwear Design</h4>
+                        <p class="text-xs text-burgundy/80 font-medium">National Institute of Fashion Technology (NIFT), Hyderabad</p>
+                        <p class="text-[11px] text-burgundy/60 italic">Batch 2021 – 2025</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Column 2 & 3: Experience, Core Competencies & Interactive Mini-Game -->
+            <div class="lg:col-span-2 flex flex-col gap-6">
+
+                <!-- Experience Bento Section -->
+                <div class="bento-card rounded-3xl p-6 sm:p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-2xl text-burgundy">Professional Experience</h3>
+                    </div>
+
+                    <div class="space-y-8">
+                        <!-- Experience 1 -->
+                        <div class="relative pl-6 border-l-2 border-burgundy/30">
+                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-burgundy"></div>
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                                <h4 class="font-bold text-base text-burgundy">Co-Creative Head — Product Development</h4>
+                                <span class="text-xs bg-burgundy text-white px-2.5 py-1 rounded-full w-fit mt-1 sm:mt-0">1 Year Experience</span>
+                            </div>
+                            <p class="text-xs font-semibold text-burgundy/75 mb-3">House of Agam</p>
+                            <ul class="space-y-2 text-xs text-burgundy/90">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
+                                    <span>Led full product development cycle independently from market research to final tech packs, fit sampling, and strategic inventory planning.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
+                                    <span>Determined fibre content and blend ratios (e.g., 70/30 organic cotton-lyocell, 90/10 lyocell-hemp) optimized for performance and sustainability.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
+                                    <span>Developed size-run and colour-split strategies grounded in Indian market data and consumer buying behavior.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Experience 2 -->
+                        <div class="relative pl-6 border-l-2 border-burgundy/30">
+                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-burgundy"></div>
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                                <h4 class="font-bold text-base text-burgundy">Merch Designer</h4>
+                                <span class="text-xs bg-burgundy/20 text-burgundy px-2.5 py-1 rounded-full w-fit mt-1 sm:mt-0">2025</span>
+                            </div>
+                            <p class="text-xs font-semibold text-burgundy/75 mb-3">Lekka (Popstar @lekkaofficial)</p>
+                            <ul class="space-y-2 text-xs text-burgundy/90">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
+                                    <span>Designed "Team Lekka" graphic T-shirts for headquarters and fans, translating artist's personality into original apparel concepts.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
+                                    <span>Achieved <strong>80%+ fan approval rate</strong> with multiple copies produced and distributed to enthusiastic followers.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Experience 3 -->
+                        <div class="relative pl-6 border-l-2 border-burgundy/30">
+                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-burgundy"></div>
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                                <h4 class="font-bold text-base text-burgundy">Graphic & Product Designer</h4>
+                                <span class="text-xs bg-burgundy/20 text-burgundy px-2.5 py-1 rounded-full w-fit mt-1 sm:mt-0">2025 • Hyderabad</span>
+                            </div>
+                            <p class="text-xs font-semibold text-burgundy/75 mb-3">WARE11</p>
+                            <ul class="space-y-2 text-xs text-burgundy/90">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
+                                    <span>Designed Formula 1-inspired streetwear T-shirt collection, hoodies, and accessories integrating motorsport culture into apparel.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
+                                    <span>Handled entire design pipeline from mood boards and color palettes to final print files and production coordination.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Competencies & Technical Skills -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- Core Competencies -->
+                    <div class="bento-card rounded-3xl p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-lg text-burgundy">Core Competencies</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Collection Strategy</span>
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Silhouette Design</span>
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Mood Board Creation</span>
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Trend Research</span>
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Fit Sample Review</span>
+                        </div>
+                    </div>
+
+                    <!-- Technical & Software Skills -->
+                    <div class="bento-card rounded-3xl p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-lg text-burgundy">Technical Skills</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Tech Pack Creation</span>
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Adobe Illustrator</span>
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Optitex</span>
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Garment Construction</span>
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">AI Workflow Tools</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- GAME ELEMENT: Sustainable Fabric Blend Matcher Mini-Game -->
+                <div id="game-section" class="bento-card rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-[#F2ECE4] to-[#E6DCD0] border-2 border-burgundy/20">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-2xl bg-burgundy text-white flex items-center justify-center text-xl shadow-md">
+                                <i class="fa-solid fa-gamepad"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-burgundy">Sustainable Knitwear Blend Matcher</h3>
+                                <p class="text-xs text-burgundy/75">Interactive Mini-Game: Match the correct sustainable fiber blend for eco-friendly collection goals!</p>
+                            </div>
+                        </div>
+                        <div class="bg-burgundy text-white px-4 py-2 rounded-2xl text-xs font-bold shadow">
+                            Score: <span id="game-score">0</span> / 3
+                        </div>
+                    </div>
+
+                    <div id="game-container" class="bg-taupe-bg p-6 rounded-2xl border border-taupe-border">
+                        <div id="question-box">
+                            <div class="flex justify-between items-center mb-3">
+                                <span id="question-counter" class="text-xs font-bold uppercase tracking-wider text-burgundy/70">Challenge 1 of 3</span>
+                                <span class="text-xs bg-amber-200 text-amber-900 px-2.5 py-0.5 rounded-full font-semibold">NIFT Master Challenge</span>
+                            </div>
+                            <h4 id="question-title" class="font-serif font-bold text-base sm:text-lg text-burgundy mb-4">
+                                Select the ideal 70/30 sustainable eco-blend for a breathable, moisture-wicking summer knitwear garment:
+                            </h4>
+                            <div id="options-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <button onclick="checkAnswer(0)" class="option-btn text-left p-3.5 rounded-xl bg-white border border-taupe-border text-xs font-medium text-burgundy hover:bg-burgundy hover:text-white transition shadow-sm">
+                                    A) 70% Organic Cotton - 30% Lyocell
+                                </button>
+                                <button onclick="checkAnswer(1)" class="option-btn text-left p-3.5 rounded-xl bg-white border border-taupe-border text-xs font-medium text-burgundy hover:bg-burgundy hover:text-white transition shadow-sm">
+                                    B) 70% Polyester - 30% Acrylic
+                                </button>
+                                <button onclick="checkAnswer(2)" class="option-btn text-left p-3.5 rounded-xl bg-white border border-taupe-border text-xs font-medium text-burgundy hover:bg-burgundy hover:text-white transition shadow-sm">
+                                    C) 50% Nylon - 50% Spandex
+                                </button>
+                                <button onclick="checkAnswer(3)" class="option-btn text-left p-3.5 rounded-xl bg-white border border-taupe-border text-xs font-medium text-burgundy hover:bg-burgundy hover:text-white transition shadow-sm">
+                                    D) 90% Virgin Wool - 10% Metallic Yarn
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="game-result" class="hidden text-center py-6">
+                            <div class="w-16 h-16 bg-green-100 text-green-700 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+                            <h4 class="font-serif font-bold text-xl text-burgundy mb-2">Wonderful! Collection Master!</h4>
+                            <p class="text-xs text-burgundy/80 mb-4">You successfully matched sustainable knitwear blends like Chahat Aneja at House of Agam & NIFT Hyderabad.</p>
+                            <button onclick="resetGame()" class="px-6 py-2.5 rounded-full bg-burgundy text-white text-xs font-semibold hover:bg-burgundy-dark transition shadow">
+                                Play Again
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Me Card -->
+                <div class="bento-card rounded-3xl p-6 sm:p-8">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-2xl text-burgundy">Why Hire Me?</h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-burgundy/90">
+                        <div class="bg-taupe-bg p-4 rounded-2xl border border-taupe-border">
+                            <h4 class="font-bold text-burgundy mb-1 flex items-center gap-2"><i class="fa-solid fa-check-circle text-burgundy"></i> Complete Product Lifecycle</h4>
+                            <p class="text-burgundy/80">Hands-on experience owning the complete product lifecycle from ideation to fit sample to shelf-ready inventory independently at brand level.</p>
+                        </div>
+                        <div class="bg-taupe-bg p-4 rounded-2xl border border-taupe-border">
+                            <h4 class="font-bold text-burgundy mb-1 flex items-center gap-2"><i class="fa-solid fa-check-circle text-burgundy"></i> Export House Proven</h4>
+                            <p class="text-burgundy/80">Work selected for production by global brands like <strong>Superdry, Lyle & Scott, Kate Spade, and Tommy Bahama</strong> during internships at Gokaldas & Triburg.</p>
+                        </div>
+                        <div class="bg-taupe-bg p-4 rounded-2xl border border-taupe-border">
+                            <h4 class="font-bold text-burgundy mb-1 flex items-center gap-2"><i class="fa-solid fa-check-circle text-burgundy"></i> Heritage Textile Fluency</h4>
+                            <p class="text-burgundy/80">Strong grasp of Indian heritage textiles (Kalamkari, Ajrakh, Ikat) expertly applied to contemporary product development.</p>
+                        </div>
+                        <div class="bg-taupe-bg p-4 rounded-2xl border border-taupe-border">
+                            <h4 class="font-bold text-burgundy mb-1 flex items-center gap-2"><i class="fa-solid fa-check-circle text-burgundy"></i> Dual-Sided Supply Chain</h4>
+                            <p class="text-burgundy/80">Trained across export manufacturing and buying-house sourcing, bringing deep fluency in fiber specifications and GSM standards.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-xs text-burgundy/70 py-6 border-t border-taupe-border">
+            <p>© 2026 Chahat Aneja • Crafted for Excellence at Deloitte, EY, Accenture & Google Standards.</p>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript for Mini-Game & Toast -->
+    <script>
+        // Toast Notification System (replaces alert)
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.textContent = message;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3500);
+        }
+
+        // Mini-Game Logic
+        let currentQuestion = 0;
+        let score = 0;
+
+        const questions = [
+            {
+                title: "Select the ideal 70/30 sustainable eco-blend for a breathable summer knitwear garment:",
+                options: [
+                    "A) 70% Organic Cotton - 30% Lyocell",
+                    "B) 70% Polyester - 30% Acrylic",
+                    "C) 50% Nylon - 50% Spandex",
+                    "D) 90% Virgin Wool - 10% Metallic Yarn"
+                ],
+                correct: 0
+            },
+            {
+                title: "Which specialized testing metric is crucial for determining knit fabric weight and warmth density?",
+                options: [
+                    "A) DPI (Dots Per Inch)",
+                    "B) GSM (Grams per Square Meter)",
+                    "C) RPM (Revolutions Per Minute)",
+                    "D) FPS (Frames Per Second)"
+                ],
+                correct: 1
+            },
+            {
+                title: "Which traditional Indian heritage textile was successfully adapted into contemporary collections?",
+                options: [
+                    "A) Denim Twill",
+                    "B) Tweed Check",
+                    "C) Kalamkari, Ajrakh & Ikat",
+                    "D) Tartan Plaid"
+                ],
+                correct: 2
+            }
+        ];
+
+        function checkAnswer(selectedIndex) {
+            const q = questions[currentQuestion];
+            if (selectedIndex === q.correct) {
+                score++;
+                document.getElementById('game-score').textContent = score;
+                showToast("Correct! Excellent knitwear knowledge.");
+            } else {
+                showToast("Incorrect! Keep exploring Chahat's expertise.");
+            }
+
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                loadQuestion();
+            } else {
+                document.getElementById('question-box').classList.add('hidden');
+                document.getElementById('game-result').classList.remove('hidden');
+            }
+        }
+
+        function loadQuestion() {
+            const q = questions[currentQuestion];
+            document.getElementById('question-counter').textContent = `Challenge ${currentQuestion + 1} of 3`;
+            document.getElementById('question-title').textContent = q.title;
+            const optionsContainer = document.getElementById('options-grid');
+            optionsContainer.innerHTML = '';
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn text-left p-3.5 rounded-xl bg-white border border-taupe-border text-xs font-medium text-burgundy hover:bg-burgundy hover:text-white transition shadow-sm';
+                btn.textContent = opt;
+                btn.onclick = () => checkAnswer(idx);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function resetGame() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('game-score').textContent = score;
+            document.getElementById('question-box').classList.remove('hidden');
+            document.getElementById('game-result').classList.add('hidden');
+            loadQuestion();
+            showToast("Game restarted!");
+        }
+    </script>
+</body>
+</html>
