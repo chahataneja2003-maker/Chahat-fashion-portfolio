@@ -3,7 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chahat Aneja — Product Development & Creative Head | Knitwear Specialist</title>
+    <title>Chahat Aneja — Creative Head / Knitwear Specialist</title>
+    <meta name="description" content="Product Development & Creative Head specializing in luxury knitwear engineering, sustainable fibre blends, tech packs, and inventory strategy.">
+
+    <!-- WhatsApp & Social Link Preview Tags -->
+    <meta property="og:site_name" content="Chahat Aneja Portfolio" />
+    <meta property="og:title" content="Chahat Aneja — Creative Head / Knitwear Specialist" />
+    <meta property="og:description" content="End-to-end Product Development, Luxury Knitwear Engineering & Collection Strategy | NIFT Hyderabad." />
+    <meta property="og:image" content="https://chahataneja2003-maker.github.io/Chahat-fashion-portfolio/Screenshot%202026-10-15%20141651.png" />
+    <meta property="og:image:secure_url" content="https://chahataneja2003-maker.github.io/Chahat-fashion-portfolio/Screenshot%202026-10-15%20141651.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:url" content="https://chahataneja2003-maker.github.io/Chahat-fashion-portfolio/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter / Universal Card Fallback -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Chahat Aneja — Creative Head / Knitwear Specialist" />
+    <meta name="twitter:description" content="End-to-end Product Development, Luxury Knitwear Engineering & Collection Strategy | NIFT Hyderabad." />
+    <meta name="twitter:image" content="https://chahataneja2003-maker.github.io/Chahat-fashion-portfolio/Screenshot%202026-10-15%20141651.png" />
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Playfair Display & Inter -->
@@ -44,16 +64,19 @@
             color: #4A0404;
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
         }
         .bento-card {
             background-color: #F2ECE4;
             border: 1px solid #D6CEC2;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .bento-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 32px -10px rgba(90, 14, 23, 0.12);
-            border-color: #8C3B44;
+        @media (hover: hover) {
+            .bento-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 16px 32px -10px rgba(90, 14, 23, 0.12);
+                border-color: #8C3B44;
+            }
         }
         /* Custom floating fabric particles background animation */
         @keyframes floatParticle {
@@ -82,43 +105,43 @@
 <body class="relative selection:bg-burgundy selection:text-white">
 
     <!-- Floating Background Thread/Fabric Elements -->
-    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-40">
-        <div class="floating-element text-burgundy/20 text-3xl top-[10%] left-[5%]" style="animation-delay: 0s;"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-        <div class="floating-element text-burgundy/20 text-4xl top-[25%] right-[8%]" style="animation-delay: 2s;"><i class="fa-solid fa-feather"></i></div>
-        <div class="floating-element text-burgundy/20 text-3xl top-[65%] left-[10%]" style="animation-delay: 4s;"><i class="fa-solid fa-shirt"></i></div>
-        <div class="floating-element text-burgundy/20 text-5xl top-[80%] right-[15%]" style="animation-delay: 1s;"><i class="fa-solid fa-spa"></i></div>
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-30 sm:opacity-40">
+        <div class="floating-element text-burgundy/20 text-2xl sm:text-3xl top-[10%] left-[5%]" style="animation-delay: 0s;"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <div class="floating-element text-burgundy/20 text-3xl sm:text-4xl top-[25%] right-[8%]" style="animation-delay: 2s;"><i class="fa-solid fa-feather"></i></div>
+        <div class="floating-element text-burgundy/20 text-2xl sm:text-3xl top-[65%] left-[10%]" style="animation-delay: 4s;"><i class="fa-solid fa-shirt"></i></div>
+        <div class="floating-element text-burgundy/20 text-4xl sm:text-5xl top-[80%] right-[15%]" style="animation-delay: 1s;"><i class="fa-solid fa-spa"></i></div>
     </div>
 
-    <!-- Toast Notification Box (Replaces alert) -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 bg-burgundy text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3 border border-burgundy-light">
-        <i class="fa-solid fa-circle-check text-xl text-amber-200"></i>
+    <!-- Toast Notification Box (Mobile & Desktop Responsive) -->
+    <div id="toast" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:bottom-6 sm:right-6 z-50 transform translate-y-28 opacity-0 transition-all duration-300 bg-burgundy text-white px-5 py-3.5 sm:px-6 sm:py-4 rounded-2xl shadow-2xl flex items-center gap-3 border border-burgundy-light">
+        <i class="fa-solid fa-circle-check text-lg sm:text-xl text-amber-200 shrink-0"></i>
         <div>
-            <h4 class="font-semibold text-sm">Notification</h4>
-            <p id="toast-message" class="text-xs text-amber-100">Action completed successfully.</p>
+            <h4 class="font-semibold text-xs sm:text-sm">Notification</h4>
+            <p id="toast-message" class="text-[11px] sm:text-xs text-amber-100">Action completed successfully.</p>
         </div>
     </div>
 
     <!-- Email Me Interactive Modal Pop-Up -->
-    <div id="email-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-burgundy-dark/60 backdrop-blur-sm transition-opacity duration-300 opacity-0" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <div id="email-modal-card" class="bg-taupe-card border-2 border-burgundy/25 rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl transform scale-95 transition-transform duration-300 relative">
+    <div id="email-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-4 bg-burgundy-dark/60 backdrop-blur-sm transition-opacity duration-300 opacity-0" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div id="email-modal-card" class="bg-taupe-card border-2 border-burgundy/25 rounded-3xl max-w-md w-full p-5 sm:p-8 shadow-2xl transform scale-95 transition-transform duration-300 relative max-h-[92vh] overflow-y-auto">
             <!-- Close Button -->
-            <button type="button" onclick="closeEmailModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-taupe-bg text-burgundy hover:bg-burgundy hover:text-white transition flex items-center justify-center shadow-sm" aria-label="Close modal">
+            <button type="button" onclick="closeEmailModal()" class="absolute top-4 right-4 sm:top-5 sm:right-5 w-9 h-9 rounded-full bg-taupe-bg text-burgundy hover:bg-burgundy hover:text-white transition flex items-center justify-center shadow-sm" aria-label="Close modal">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
             <!-- Header -->
-            <div class="flex items-center gap-3 mb-5">
-                <div class="w-11 h-11 rounded-2xl bg-burgundy text-white flex items-center justify-center text-lg shadow-md">
+            <div class="flex items-center gap-3 mb-4 sm:mb-5 pr-8">
+                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-burgundy text-white flex items-center justify-center text-base sm:text-lg shadow-md shrink-0">
                     <i class="fa-solid fa-paper-plane"></i>
                 </div>
                 <div>
-                    <h3 id="modal-title" class="font-serif font-bold text-xl text-burgundy">Send a Message</h3>
-                    <p class="text-xs text-burgundy/75">Direct inquiry to Chahat Aneja</p>
+                    <h3 id="modal-title" class="font-serif font-bold text-lg sm:text-xl text-burgundy">Send a Message</h3>
+                    <p class="text-[11px] sm:text-xs text-burgundy/75">Direct inquiry to Chahat Aneja</p>
                 </div>
             </div>
 
             <!-- Email ID Display Box with One-Click Copy -->
-            <div class="bg-taupe-bg border border-taupe-border rounded-2xl p-3.5 mb-5 flex items-center justify-between gap-2">
+            <div class="bg-taupe-bg border border-taupe-border rounded-2xl p-3 sm:p-3.5 mb-4 sm:mb-5 flex items-center justify-between gap-2">
                 <div class="overflow-hidden">
                     <span class="block text-[10px] uppercase tracking-wider font-semibold text-burgundy/60">Recipient Email ID</span>
                     <span id="recipient-email" class="text-xs sm:text-sm font-semibold text-burgundy select-all truncate block">chahataneja2003@gmail.com</span>
@@ -129,31 +152,31 @@
             </div>
 
             <!-- Message Form -->
-            <form id="email-form" onsubmit="handleSendEmail(event)" class="space-y-4">
+            <form id="email-form" onsubmit="handleSendEmail(event)" class="space-y-3.5 sm:space-y-4">
                 <div>
-                    <label for="sender-name" class="block text-xs font-semibold text-burgundy mb-1.5">Your Name / Company <span class="text-burgundy/50 font-normal">(Optional)</span></label>
-                    <input type="text" id="sender-name" name="name" placeholder="e.g., Priya from Deloitte HR" class="w-full px-4 py-2.5 rounded-xl bg-white border border-taupe-border text-xs sm:text-sm text-burgundy placeholder-burgundy/40 focus:outline-none focus:border-burgundy transition">
+                    <label for="sender-name" class="block text-xs font-semibold text-burgundy mb-1">Your Name / Company <span class="text-burgundy/50 font-normal">(Optional)</span></label>
+                    <input type="text" id="sender-name" name="name" placeholder="e.g., Priya from Deloitte HR" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-taupe-border text-xs sm:text-sm text-burgundy placeholder-burgundy/40 focus:outline-none focus:border-burgundy transition">
                 </div>
 
                 <div>
-                    <label for="sender-email" class="block text-xs font-semibold text-burgundy mb-1.5">Your Email <span class="text-burgundy/50 font-normal">(For reply)</span></label>
-                    <input type="email" id="sender-email" name="email" placeholder="e.g., hr@company.com" class="w-full px-4 py-2.5 rounded-xl bg-white border border-taupe-border text-xs sm:text-sm text-burgundy placeholder-burgundy/40 focus:outline-none focus:border-burgundy transition">
+                    <label for="sender-email" class="block text-xs font-semibold text-burgundy mb-1">Your Email <span class="text-burgundy/50 font-normal">(For reply)</span></label>
+                    <input type="email" id="sender-email" name="email" placeholder="e.g., hr@company.com" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-taupe-border text-xs sm:text-sm text-burgundy placeholder-burgundy/40 focus:outline-none focus:border-burgundy transition">
                 </div>
 
                 <div>
-                    <label for="email-message" class="block text-xs font-semibold text-burgundy mb-1.5">Your Message <span class="text-burgundy">*</span></label>
-                    <textarea id="email-message" name="message" rows="4" required placeholder="Hi Chahat, we loved your knitwear portfolio and would like to connect regarding..." class="w-full px-4 py-3 rounded-xl bg-white border border-taupe-border text-xs sm:text-sm text-burgundy placeholder-burgundy/40 focus:outline-none focus:border-burgundy transition resize-none"></textarea>
+                    <label for="email-message" class="block text-xs font-semibold text-burgundy mb-1">Your Message <span class="text-burgundy">*</span></label>
+                    <textarea id="email-message" name="message" rows="4" required placeholder="Hi Chahat, we loved your knitwear portfolio and would like to connect regarding..." class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-taupe-border text-xs sm:text-sm text-burgundy placeholder-burgundy/40 focus:outline-none focus:border-burgundy transition resize-none"></textarea>
                 </div>
 
                 <!-- Send Button with Send Arrow -->
-                <div class="pt-1 flex items-center justify-end gap-3">
+                <div class="pt-1 flex items-center justify-end gap-2 sm:gap-3">
                     <button type="button" onclick="closeEmailModal()" class="px-4 py-2.5 rounded-full text-xs font-semibold text-burgundy/75 hover:text-burgundy transition">
                         Cancel
                     </button>
-                    <button type="submit" id="send-mail-btn" class="px-6 py-3 rounded-full bg-burgundy hover:bg-burgundy-dark text-white text-xs sm:text-sm font-semibold transition shadow-lg hover:shadow-xl flex items-center gap-2.5 group disabled:opacity-60 disabled:cursor-not-allowed">
+                    <button type="submit" id="send-mail-btn" class="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-burgundy hover:bg-burgundy-dark text-white text-xs sm:text-sm font-semibold transition shadow-lg hover:shadow-xl flex items-center gap-2 group disabled:opacity-60 disabled:cursor-not-allowed">
                         <span id="send-btn-text">Send Mail</span>
-                        <span class="w-6 h-6 rounded-full bg-white/15 flex items-center justify-center transform group-hover:translate-x-1 transition-transform">
-                            <i id="send-btn-icon" class="fa-solid fa-arrow-right text-xs"></i>
+                        <span class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white/15 flex items-center justify-center transform group-hover:translate-x-1 transition-transform">
+                            <i id="send-btn-icon" class="fa-solid fa-arrow-right text-[10px] sm:text-xs"></i>
                         </span>
                     </button>
                 </div>
@@ -183,47 +206,47 @@
     </div>
 
     <!-- Main Container -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 relative z-10">
+    <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 py-5 sm:py-8 md:py-12 relative z-10">
 
-        <!-- Top Navigation Widget -->
-        <header class="bento-card rounded-3xl p-4 sm:p-6 mb-8 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-sm">
-            <div class="flex items-center gap-3">
-                <div class="w-12 h-12 rounded-full bg-burgundy text-white flex items-center justify-center font-serif font-bold text-xl shadow-md">
+        <!-- Top Navigation Widget (Mobile-Optimized Layout) -->
+        <header class="bento-card rounded-3xl p-4 sm:p-6 mb-5 sm:mb-8 flex flex-col sm:flex-row justify-between items-center gap-3.5 sm:gap-4 shadow-sm">
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-center sm:justify-start text-center sm:text-left">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-burgundy text-white flex items-center justify-center font-serif font-bold text-lg sm:text-xl shadow-md shrink-0">
                     CA
                 </div>
                 <div>
-                    <h1 class="font-serif font-bold text-lg sm:text-xl text-burgundy">Chahat Aneja</h1>
-                    <p class="text-xs uppercase tracking-widest text-burgundy/75 font-semibold">NIFT Hyderabad • Batch 2021–2025</p>
+                    <h1 class="font-serif font-bold text-lg sm:text-xl text-burgundy leading-tight">Chahat Aneja</h1>
+                    <p class="text-[10px] sm:text-xs uppercase tracking-widest text-burgundy/75 font-semibold mt-0.5">NIFT Hyderabad • Batch 2021–2025</p>
                 </div>
             </div>
             
-            <div class="flex items-center gap-2 sm:gap-4 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0 justify-center">
-                <button type="button" onclick="openEmailModal()" class="px-4 py-2 rounded-full bg-burgundy text-white text-xs font-medium hover:bg-burgundy-dark transition flex items-center gap-2 shadow-sm cursor-pointer">
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 w-full sm:w-auto">
+                <button type="button" onclick="openEmailModal()" class="px-3.5 sm:px-4 py-2 rounded-full bg-burgundy text-white text-xs font-medium hover:bg-burgundy-dark transition flex items-center gap-1.5 sm:gap-2 shadow-sm cursor-pointer">
                     <i class="fa-solid fa-envelope"></i> Email Me
                 </button>
-                <a href="https://linkedin.com/in/chahat-aneja-b6397b229" target="_blank" class="px-4 py-2 rounded-full bg-taupe-border text-burgundy text-xs font-medium hover:bg-burgundy hover:text-white transition flex items-center gap-2 shadow-sm">
+                <a href="https://linkedin.com/in/chahat-aneja-b6397b229" target="_blank" rel="noopener" class="px-3.5 sm:px-4 py-2 rounded-full bg-taupe-border text-burgundy text-xs font-medium hover:bg-burgundy hover:text-white transition flex items-center gap-1.5 sm:gap-2 shadow-sm">
                     <i class="fa-brands fa-linkedin-in"></i> LinkedIn
                 </a>
-                <a href="#game-section" class="px-4 py-2 rounded-full bg-amber-900 text-amber-100 text-xs font-medium hover:bg-amber-950 transition flex items-center gap-2 shadow-sm">
+                <a href="#game-section" class="px-3.5 sm:px-4 py-2 rounded-full bg-amber-900 text-amber-100 text-xs font-medium hover:bg-amber-950 transition flex items-center gap-1.5 sm:gap-2 shadow-sm">
                     <i class="fa-solid fa-gamepad"></i> Fiber Mini-Game
                 </a>
             </div>
         </header>
 
         <!-- Bento Grid Layout -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
 
             <!-- Column 1: Profile Hero & Core Specialisation -->
-            <div class="lg:col-span-1 flex flex-col gap-6">
+            <div class="lg:col-span-1 flex flex-col gap-4 sm:gap-6">
                 
                 <!-- Hero Card -->
-                <div class="bento-card rounded-3xl p-6 sm:p-8 relative overflow-hidden flex flex-col items-center text-center">
+                <div class="bento-card rounded-3xl p-5 sm:p-8 relative overflow-hidden flex flex-col items-center text-center">
                     <div class="absolute -top-12 -right-12 w-32 h-32 bg-burgundy/10 rounded-full blur-2xl pointer-events-none"></div>
                     
                     <!-- Profile Picture Circle Badge -->
-                    <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-full p-1.5 bg-gradient-to-tr from-amber-700 via-burgundy to-burgundy-dark mb-5 shadow-xl relative group flex items-center justify-center">
+                    <div class="w-32 h-32 sm:w-44 sm:h-44 rounded-full p-1.5 bg-gradient-to-tr from-amber-700 via-burgundy to-burgundy-dark mb-4 sm:mb-5 shadow-xl relative group flex items-center justify-center">
                         <div class="w-full h-full rounded-full overflow-hidden border-2 border-amber-600/40 bg-burgundy flex items-center justify-center relative">
-                            <img id="profile-photo-img" src="./Screenshot%202026-10-15%20141651.png" alt="Chahat Aneja" class="w-full h-full object-cover object-top rounded-full transform transition duration-500 group-hover:scale-105" onerror="handleProfileImgError(this)">
+                            <img id="profile-photo-img" src="Screenshot%202026-10-15%20141651.png" alt="Chahat Aneja" class="w-full h-full object-cover object-top rounded-full transform transition duration-500 group-hover:scale-105" onerror="handleProfileImgError(this)">
                             <div id="profile-fallback" style="display:none;" class="w-full h-full items-center justify-center flex-col text-white font-serif">
                                 <span class="text-3xl font-bold tracking-wider">CA</span>
                                 <span class="text-[10px] uppercase tracking-widest text-amber-200/80 mt-1">Chahat Aneja</span>
@@ -232,38 +255,41 @@
                     </div>
 
                     <h2 class="font-serif font-bold text-2xl sm:text-3xl text-burgundy mb-2">Chahat Aneja</h2>
-                    <p class="text-xs font-semibold uppercase tracking-wider text-burgundy/80 mb-4 bg-taupe-border/50 px-3 py-1 rounded-full">Product Development & Creative Head</p>
+                    <p class="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-burgundy/80 mb-3.5 sm:mb-4 bg-taupe-border/50 px-3 py-1 rounded-full">Product Development & Creative Head</p>
                     
-                    <p class="text-xs sm:text-sm text-burgundy/90 leading-relaxed mb-6">
-                        Fashion professional with end-to-end product development expertise. Specialist in knitwear bridging the gap between creative vision and production precision.
+                    <p class="text-xs sm:text-sm text-burgundy/90 leading-relaxed mb-5 sm:mb-6">
+                        Fashion professional with end-to-end product development expertise, specializing in knitwear and bridging the gap between creative vision and production precision.
                     </p>
 
-                    <div class="grid grid-cols-2 gap-3 w-full border-t border-taupe-border pt-4">
+                    <div class="grid grid-cols-2 gap-2.5 sm:gap-3 w-full border-t border-taupe-border pt-4">
                         <div class="bg-taupe-bg p-3 rounded-2xl text-center">
-                            <span class="block font-serif font-bold text-xl text-burgundy">100%</span>
+                            <span class="block font-serif font-bold text-lg sm:text-xl text-burgundy">100%</span>
                             <span class="text-[10px] uppercase font-semibold text-burgundy/70">End-to-End Ownership</span>
                         </div>
                         <div class="bg-taupe-bg p-3 rounded-2xl text-center">
-                            <span class="block font-serif font-bold text-xl text-burgundy">80%+</span>
+                            <span class="block font-serif font-bold text-lg sm:text-xl text-burgundy">80%+</span>
                             <span class="text-[10px] uppercase font-semibold text-burgundy/70">Fan Approval Rate</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Knitwear Specialisation Card -->
-                <div class="bento-card rounded-3xl p-6 sm:p-8">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center text-lg">
+                <div class="bento-card rounded-3xl p-5 sm:p-8">
+                    <div class="flex items-center gap-3 mb-3.5 sm:mb-4">
+                        <div class="w-10 h-10 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center text-lg shrink-0">
                             <i class="fa-solid fa-shirt"></i>
                         </div>
-                        <h3 class="font-serif font-bold text-xl text-burgundy">Knitwear Specialisation</h3>
+                        <h3 class="font-serif font-bold text-lg sm:text-xl text-burgundy">Knitwear Specialisation</h3>
                     </div>
                     
-                    <p class="text-xs text-burgundy/80 mb-4">Strong command of fibre blends, fabric construction, finishes, and GSM calculation for export and boutique labels.</p>
+                    <p class="text-xs sm:text-[13px] text-burgundy/85 leading-relaxed mb-4">
+                        Strong command of fabric construction, finishes, GSM, and special fibre blend percentage calculations tailored to functionality and target markets across premium and luxury brands.
+                    </p>
                     
                     <div class="flex flex-wrap gap-2">
                         <span class="text-xs bg-burgundy/10 text-burgundy px-3 py-1.5 rounded-xl font-medium">Organic Cotton</span>
                         <span class="text-xs bg-burgundy/10 text-burgundy px-3 py-1.5 rounded-xl font-medium">Lyocell Blends</span>
+                        <span class="text-xs bg-burgundy/10 text-burgundy px-3 py-1.5 rounded-xl font-medium">Linen Blends</span>
                         <span class="text-xs bg-burgundy/10 text-burgundy px-3 py-1.5 rounded-xl font-medium">Hemp & Bamboo</span>
                         <span class="text-xs bg-burgundy/10 text-burgundy px-3 py-1.5 rounded-xl font-medium">GSM & Finishes</span>
                         <span class="text-xs bg-burgundy/10 text-burgundy px-3 py-1.5 rounded-xl font-medium">Suvin Cotton</span>
@@ -271,96 +297,104 @@
                 </div>
 
                 <!-- Education Card -->
-                <div class="bento-card rounded-3xl p-6 sm:p-8">
+                <div class="bento-card rounded-3xl p-5 sm:p-8">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center text-lg">
+                        <div class="w-10 h-10 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center text-lg shrink-0">
                             <i class="fa-solid fa-graduation-cap"></i>
                         </div>
-                        <h3 class="font-serif font-bold text-xl text-burgundy">Education</h3>
+                        <h3 class="font-serif font-bold text-lg sm:text-xl text-burgundy">Education</h3>
                     </div>
                     
-                    <div class="border-l-2 border-burgundy/30 pl-4 space-y-1">
-                        <h4 class="font-semibold text-sm text-burgundy">B.Des in Knitwear Design</h4>
-                        <p class="text-xs text-burgundy/80 font-medium">National Institute of Fashion Technology (NIFT), Hyderabad</p>
-                        <p class="text-[11px] text-burgundy/60 italic">Batch 2021 – 2025</p>
+                    <div class="space-y-4">
+                        <div class="border-l-2 border-burgundy/30 pl-4 space-y-1">
+                            <h4 class="font-semibold text-sm text-burgundy">B.Des in Knitwear Design</h4>
+                            <p class="text-xs text-burgundy/80 font-medium">National Institute of Fashion Technology (NIFT), Hyderabad</p>
+                            <p class="text-[11px] text-burgundy/60 italic">Batch 2021 – 2025</p>
+                        </div>
+
+                        <div class="border-l-2 border-burgundy/30 pl-4 space-y-1">
+                            <h4 class="font-semibold text-sm text-burgundy">International Baccalaureate (IB) Board</h4>
+                            <p class="text-xs text-burgundy/80 font-medium">DPS International</p>
+                            <p class="text-[11px] text-burgundy/60 italic">Graduated in 2021</p>
+                        </div>
                     </div>
                 </div>
 
             </div>
 
             <!-- Column 2 & 3: Experience, Core Competencies & Interactive Mini-Game -->
-            <div class="lg:col-span-2 flex flex-col gap-6">
+            <div class="lg:col-span-2 flex flex-col gap-4 sm:gap-6">
 
                 <!-- Experience Bento Section -->
-                <div class="bento-card rounded-3xl p-6 sm:p-8">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center text-lg">
+                <div class="bento-card rounded-3xl p-5 sm:p-8">
+                    <div class="flex items-center gap-3 mb-5 sm:mb-6">
+                        <div class="w-10 h-10 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center text-lg shrink-0">
                             <i class="fa-solid fa-briefcase"></i>
                         </div>
-                        <h3 class="font-serif font-bold text-2xl text-burgundy">Professional Experience</h3>
+                        <h3 class="font-serif font-bold text-xl sm:text-2xl text-burgundy">Professional Experience</h3>
                     </div>
 
-                    <div class="space-y-8">
+                    <div class="space-y-6 sm:space-y-8">
                         <!-- Experience 1 -->
-                        <div class="relative pl-6 border-l-2 border-burgundy/30">
+                        <div class="relative pl-5 sm:pl-6 border-l-2 border-burgundy/30">
                             <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-burgundy"></div>
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-                                <h4 class="font-bold text-base text-burgundy">Co-Creative Head — Product Development</h4>
-                                <span class="text-xs bg-burgundy text-white px-2.5 py-1 rounded-full w-fit mt-1 sm:mt-0">1 Year Experience</span>
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1.5 sm:mb-2 gap-1">
+                                <h4 class="font-bold text-sm sm:text-base text-burgundy">Co-Creative Head — Product Development</h4>
+                                <span class="text-[11px] sm:text-xs bg-burgundy text-white px-2.5 py-0.5 sm:py-1 rounded-full w-fit">1 Year Experience</span>
                             </div>
-                            <p class="text-xs font-semibold text-burgundy/75 mb-3">House of Agam</p>
-                            <ul class="space-y-2 text-xs text-burgundy/90">
+                            <p class="text-xs font-semibold text-burgundy/75 mb-2.5 sm:mb-3">House of Agam</p>
+                            <ul class="space-y-2 text-xs text-burgundy/90 leading-relaxed">
                                 <li class="flex items-start gap-2">
-                                    <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
-                                    <span>Led full product development cycle independently from market research to final tech packs, fit sampling, and strategic inventory planning.</span>
+                                    <i class="fa-solid fa-check text-burgundy mt-0.5 shrink-0"></i>
+                                    <span>Led the full product development cycle independently from market research to final tech packs, fit sampling, and strategic inventory planning.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
+                                    <i class="fa-solid fa-check text-burgundy mt-0.5 shrink-0"></i>
                                     <span>Determined fibre content and blend ratios (e.g., 70/30 organic cotton-lyocell, 90/10 lyocell-hemp) optimized for performance and sustainability.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
-                                    <span>Developed size-run and colour-split strategies grounded in Indian market data and consumer buying behavior.</span>
+                                    <i class="fa-solid fa-check text-burgundy mt-0.5 shrink-0"></i>
+                                    <span>Developed size-run and colour-split strategies grounded in Indian market data and consumer buying behaviour.</span>
                                 </li>
                             </ul>
                         </div>
 
                         <!-- Experience 2 -->
-                        <div class="relative pl-6 border-l-2 border-burgundy/30">
+                        <div class="relative pl-5 sm:pl-6 border-l-2 border-burgundy/30">
                             <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-burgundy"></div>
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-                                <h4 class="font-bold text-base text-burgundy">Merch Designer</h4>
-                                <span class="text-xs bg-burgundy/20 text-burgundy px-2.5 py-1 rounded-full w-fit mt-1 sm:mt-0">2025</span>
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1.5 sm:mb-2 gap-1">
+                                <h4 class="font-bold text-sm sm:text-base text-burgundy">Merch Designer</h4>
+                                <span class="text-[11px] sm:text-xs bg-burgundy/20 text-burgundy px-2.5 py-0.5 sm:py-1 rounded-full w-fit">2025</span>
                             </div>
-                            <p class="text-xs font-semibold text-burgundy/75 mb-3">Lekka (Popstar @lekkaofficial)</p>
-                            <ul class="space-y-2 text-xs text-burgundy/90">
+                            <p class="text-xs font-semibold text-burgundy/75 mb-2.5 sm:mb-3">Lekka (Popstar @lekkaofficial)</p>
+                            <ul class="space-y-2 text-xs text-burgundy/90 leading-relaxed">
                                 <li class="flex items-start gap-2">
-                                    <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
-                                    <span>Designed "Team Lekka" graphic T-shirts for headquarters and fans, translating artist's personality into original apparel concepts.</span>
+                                    <i class="fa-solid fa-check text-burgundy mt-0.5 shrink-0"></i>
+                                    <span>Designed "Team Lekka" graphic T-shirts for headquarters and fans, translating the artist's personality into original apparel concepts.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
-                                    <span>Achieved <strong>80%+ fan approval rate</strong> with multiple copies produced and distributed to enthusiastic followers.</span>
+                                    <i class="fa-solid fa-check text-burgundy mt-0.5 shrink-0"></i>
+                                    <span>Achieved an <strong>80%+ fan approval rate</strong> with multiple runs produced and distributed to enthusiastic followers.</span>
                                 </li>
                             </ul>
                         </div>
 
                         <!-- Experience 3 -->
-                        <div class="relative pl-6 border-l-2 border-burgundy/30">
+                        <div class="relative pl-5 sm:pl-6 border-l-2 border-burgundy/30">
                             <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-burgundy"></div>
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-                                <h4 class="font-bold text-base text-burgundy">Graphic & Product Designer</h4>
-                                <span class="text-xs bg-burgundy/20 text-burgundy px-2.5 py-1 rounded-full w-fit mt-1 sm:mt-0">2025 • Hyderabad</span>
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1.5 sm:mb-2 gap-1">
+                                <h4 class="font-bold text-sm sm:text-base text-burgundy">Graphic & Product Designer</h4>
+                                <span class="text-[11px] sm:text-xs bg-burgundy/20 text-burgundy px-2.5 py-0.5 sm:py-1 rounded-full w-fit">2025 • Hyderabad</span>
                             </div>
-                            <p class="text-xs font-semibold text-burgundy/75 mb-3">WARE11</p>
-                            <ul class="space-y-2 text-xs text-burgundy/90">
+                            <p class="text-xs font-semibold text-burgundy/75 mb-2.5 sm:mb-3">WARE11</p>
+                            <ul class="space-y-2 text-xs text-burgundy/90 leading-relaxed">
                                 <li class="flex items-start gap-2">
-                                    <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
-                                    <span>Designed Formula 1-inspired streetwear T-shirt collection, hoodies, and accessories integrating motorsport culture into apparel.</span>
+                                    <i class="fa-solid fa-check text-burgundy mt-0.5 shrink-0"></i>
+                                    <span>Designed a Formula 1-inspired streetwear collection across T-shirts, hoodies, and accessories, integrating motorsport culture into wearable graphics.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
-                                    <span>Handled entire design pipeline from mood boards and color palettes to final print files and production coordination.</span>
+                                    <i class="fa-solid fa-check text-burgundy mt-0.5 shrink-0"></i>
+                                    <span>Handled the entire design pipeline from mood boards and colour palettes to final print files and production coordination.</span>
                                 </li>
                             </ul>
                         </div>
@@ -368,12 +402,12 @@
                 </div>
 
                 <!-- Competencies & Technical Skills -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     
                     <!-- Core Competencies -->
-                    <div class="bento-card rounded-3xl p-6">
+                    <div class="bento-card rounded-3xl p-5 sm:p-6">
                         <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center text-lg">
+                            <div class="w-10 h-10 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center text-lg shrink-0">
                                 <i class="fa-solid fa-star"></i>
                             </div>
                             <h3 class="font-serif font-bold text-lg text-burgundy">Core Competencies</h3>
@@ -381,16 +415,19 @@
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Collection Strategy</span>
                             <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Silhouette Design</span>
-                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Mood Board Creation</span>
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Market Analysis</span>
                             <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Trend Research</span>
-                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Fit Sample Review</span>
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Inventory Allocation</span>
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Sampling and Production Coordination</span>
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Luxury Fabric Development</span>
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Special Fibres and Blends</span>
                         </div>
                     </div>
 
                     <!-- Technical & Software Skills -->
-                    <div class="bento-card rounded-3xl p-6">
+                    <div class="bento-card rounded-3xl p-5 sm:p-6">
                         <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center text-lg">
+                            <div class="w-10 h-10 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center text-lg shrink-0">
                                 <i class="fa-solid fa-laptop-code"></i>
                             </div>
                             <h3 class="font-serif font-bold text-lg text-burgundy">Technical Skills</h3>
@@ -398,8 +435,12 @@
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Tech Pack Creation</span>
                             <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Adobe Illustrator</span>
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Adobe Photoshop</span>
                             <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Optitex</span>
                             <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Garment Construction</span>
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Costing</span>
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Inventory Planning</span>
+                            <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">Vendor Coordination</span>
                             <span class="text-xs bg-taupe-bg border border-taupe-border text-burgundy px-3 py-1.5 rounded-xl">AI Workflow Tools</span>
                         </div>
                     </div>
@@ -407,32 +448,32 @@
                 </div>
 
                 <!-- GAME ELEMENT: Sustainable Fabric Blend Matcher Mini-Game -->
-                <div id="game-section" class="bento-card rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-[#F2ECE4] to-[#E6DCD0] border-2 border-burgundy/20">
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+                <div id="game-section" class="bento-card rounded-3xl p-5 sm:p-8 bg-gradient-to-br from-[#F2ECE4] to-[#E6DCD0] border-2 border-burgundy/20">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
                         <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 rounded-2xl bg-burgundy text-white flex items-center justify-center text-xl shadow-md">
+                            <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-burgundy text-white flex items-center justify-center text-lg sm:text-xl shadow-md shrink-0">
                                 <i class="fa-solid fa-gamepad"></i>
                             </div>
                             <div>
-                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-burgundy">Sustainable Knitwear Blend Matcher</h3>
-                                <p class="text-xs text-burgundy/75">Interactive Mini-Game: Match the correct sustainable fiber blend for eco-friendly collection goals!</p>
+                                <h3 class="font-serif font-bold text-lg sm:text-2xl text-burgundy leading-snug">Sustainable Knitwear Blend Matcher</h3>
+                                <p class="text-xs text-burgundy/75 mt-0.5">Interactive Mini-Game: Match the right sustainable fibre blend for eco-friendly collection goals!</p>
                             </div>
                         </div>
-                        <div class="bg-burgundy text-white px-4 py-2 rounded-2xl text-xs font-bold shadow">
+                        <div class="bg-burgundy text-white px-4 py-1.5 sm:py-2 rounded-2xl text-xs font-bold shadow self-end sm:self-auto">
                             Score: <span id="game-score">0</span> / 3
                         </div>
                     </div>
 
-                    <div id="game-container" class="bg-taupe-bg p-6 rounded-2xl border border-taupe-border">
+                    <div id="game-container" class="bg-taupe-bg p-4 sm:p-6 rounded-2xl border border-taupe-border">
                         <div id="question-box">
-                            <div class="flex justify-between items-center mb-3">
-                                <span id="question-counter" class="text-xs font-bold uppercase tracking-wider text-burgundy/70">Challenge 1 of 3</span>
-                                <span class="text-xs bg-amber-200 text-amber-900 px-2.5 py-0.5 rounded-full font-semibold">NIFT Master Challenge</span>
+                            <div class="flex flex-wrap justify-between items-center gap-2 mb-3">
+                                <span id="question-counter" class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-burgundy/70">Challenge 1 of 3</span>
+                                <span class="text-[11px] sm:text-xs bg-amber-200 text-amber-900 px-2.5 py-0.5 rounded-full font-semibold">NIFT Master Challenge</span>
                             </div>
-                            <h4 id="question-title" class="font-serif font-bold text-base sm:text-lg text-burgundy mb-4">
+                            <h4 id="question-title" class="font-serif font-bold text-base sm:text-lg text-burgundy mb-4 leading-snug">
                                 Select the ideal 70/30 sustainable eco-blend for a breathable, moisture-wicking summer knitwear garment:
                             </h4>
-                            <div id="options-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div id="options-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
                                 <button onclick="checkAnswer(0)" class="option-btn text-left p-3.5 rounded-xl bg-white border border-taupe-border text-xs font-medium text-burgundy hover:bg-burgundy hover:text-white transition shadow-sm">
                                     A) 70% Organic Cotton - 30% Lyocell
                                 </button>
@@ -453,7 +494,7 @@
                                 <i class="fa-solid fa-trophy"></i>
                             </div>
                             <h4 class="font-serif font-bold text-xl text-burgundy mb-2">Wonderful! Collection Master!</h4>
-                            <p class="text-xs text-burgundy/80 mb-4">You successfully matched sustainable knitwear blends like Chahat Aneja at House of Agam & NIFT Hyderabad.</p>
+                            <p class="text-xs text-burgundy/80 mb-4 max-w-md mx-auto leading-relaxed">You successfully matched sustainable knitwear blends like Chahat Aneja at House of Agam & NIFT Hyderabad.</p>
                             <button onclick="resetGame()" class="px-6 py-2.5 rounded-full bg-burgundy text-white text-xs font-semibold hover:bg-burgundy-dark transition shadow">
                                 Play Again
                             </button>
@@ -462,30 +503,30 @@
                 </div>
 
                 <!-- Why Me Card -->
-                <div class="bento-card rounded-3xl p-6 sm:p-8">
+                <div class="bento-card rounded-3xl p-5 sm:p-8">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center text-lg">
+                        <div class="w-10 h-10 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center text-lg shrink-0">
                             <i class="fa-solid fa-circle-question"></i>
                         </div>
-                        <h3 class="font-serif font-bold text-2xl text-burgundy">Why Hire Me?</h3>
+                        <h3 class="font-serif font-bold text-xl sm:text-2xl text-burgundy">Why Hire Me?</h3>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-burgundy/90">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-4 text-xs text-burgundy/90">
                         <div class="bg-taupe-bg p-4 rounded-2xl border border-taupe-border">
                             <h4 class="font-bold text-burgundy mb-1 flex items-center gap-2"><i class="fa-solid fa-check-circle text-burgundy"></i> Complete Product Lifecycle</h4>
-                            <p class="text-burgundy/80">Hands-on experience owning the complete product lifecycle from ideation to fit sample to shelf-ready inventory independently at brand level.</p>
+                            <p class="text-burgundy/80 leading-relaxed">Hands-on experience owning the complete product lifecycle from ideation to fit sample to shelf-ready inventory independently at a brand level.</p>
                         </div>
                         <div class="bg-taupe-bg p-4 rounded-2xl border border-taupe-border">
                             <h4 class="font-bold text-burgundy mb-1 flex items-center gap-2"><i class="fa-solid fa-check-circle text-burgundy"></i> Export House Proven</h4>
-                            <p class="text-burgundy/80">Work selected for production by global brands like <strong>Superdry, Lyle & Scott, Kate Spade, and Tommy Bahama</strong> during internships at Gokaldas & Triburg.</p>
+                            <p class="text-burgundy/80 leading-relaxed">Work selected for production by global labels including <strong>Superdry, Lyle & Scott, Kate Spade, and Tommy Bahama</strong> during internships at Gokaldas & Triburg.</p>
                         </div>
                         <div class="bg-taupe-bg p-4 rounded-2xl border border-taupe-border">
                             <h4 class="font-bold text-burgundy mb-1 flex items-center gap-2"><i class="fa-solid fa-check-circle text-burgundy"></i> Heritage Textile Fluency</h4>
-                            <p class="text-burgundy/80">Strong grasp of Indian heritage textiles (Kalamkari, Ajrakh, Ikat) expertly applied to contemporary product development.</p>
+                            <p class="text-burgundy/80 leading-relaxed">Strong grasp of Indian heritage textiles (Kalamkari, Ajrakh, Ikat) expertly applied to contemporary product development.</p>
                         </div>
                         <div class="bg-taupe-bg p-4 rounded-2xl border border-taupe-border">
                             <h4 class="font-bold text-burgundy mb-1 flex items-center gap-2"><i class="fa-solid fa-check-circle text-burgundy"></i> Dual-Sided Supply Chain</h4>
-                            <p class="text-burgundy/80">Trained across export manufacturing and buying-house sourcing, bringing deep fluency in fiber specifications and GSM standards.</p>
+                            <p class="text-burgundy/80 leading-relaxed">Trained across export manufacturing and buying-house sourcing, bringing deep fluency in fibre specifications and GSM standards.</p>
                         </div>
                     </div>
                 </div>
@@ -495,8 +536,8 @@
         </div>
 
         <!-- Footer -->
-        <footer class="mt-12 text-center text-xs text-burgundy/70 py-6 border-t border-taupe-border flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p>© 2026 Chahat Aneja • Product Development & Creative Head | Knitwear Specialist.</p>
+        <footer class="mt-8 sm:mt-12 text-center text-xs text-burgundy/70 py-6 border-t border-taupe-border flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p>© 2026 Chahat Aneja • Creative Head / Knitwear Specialist.</p>
             <button type="button" onclick="openEmailModal()" class="text-burgundy font-semibold hover:underline flex items-center gap-1.5">
                 <i class="fa-solid fa-envelope"></i> chahataneja2003@gmail.com
             </button>
@@ -506,14 +547,14 @@
 
     <!-- JavaScript for Mini-Game, Email Modal & Toast -->
     <script>
-        // Toast Notification System (replaces alert)
+        // Toast Notification System
         function showToast(message) {
             const toast = document.getElementById('toast');
             const toastMsg = document.getElementById('toast-message');
             toastMsg.textContent = message;
-            toast.classList.remove('translate-y-24', 'opacity-0');
+            toast.classList.remove('translate-y-28', 'opacity-0');
             setTimeout(() => {
-                toast.classList.add('translate-y-24', 'opacity-0');
+                toast.classList.add('translate-y-28', 'opacity-0');
             }, 3500);
         }
 
@@ -527,16 +568,12 @@
         function handleProfileImgError(imgEl) {
             profileImgAttempt++;
             if (profileImgAttempt === 1) {
-                // Fallback 1: unencoded filename in root folder
                 imgEl.src = "Screenshot 2026-10-15 141651.png";
             } else if (profileImgAttempt === 2) {
-                // Fallback 2: raw GitHub repository asset URL
                 imgEl.src = "https://raw.githubusercontent.com/chahataneja2003-maker/Chahat-fashion-portfolio/main/Screenshot%202026-10-15%20141651.png";
             } else if (profileImgAttempt === 3) {
-                // Fallback 3: profile.png if renamed later
                 imgEl.src = "./profile.png";
             } else {
-                // Final fallback: clean monogram badge
                 imgEl.style.display = "none";
                 const fallbackDiv = document.getElementById("profile-fallback");
                 if (fallbackDiv) {
@@ -549,7 +586,6 @@
             resetEmailModalForm();
             emailModal.classList.remove('hidden');
             emailModal.classList.add('flex');
-            // Trigger animation frame for smooth transition
             requestAnimationFrame(() => {
                 emailModal.classList.remove('opacity-0');
                 emailModalCard.classList.remove('scale-95');
@@ -585,21 +621,18 @@
             }, 300);
         }
 
-        // Close modal when clicking backdrop
         emailModal.addEventListener('click', function(e) {
             if (e.target === emailModal) {
                 closeEmailModal();
             }
         });
 
-        // Close modal on Escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && !emailModal.classList.contains('hidden')) {
                 closeEmailModal();
             }
         });
 
-        // Copy Email ID to Clipboard (using execCommand for universal iFrame compatibility)
         function copyEmailAddress() {
             const emailText = "chahataneja2003@gmail.com";
             const tempInput = document.createElement("input");
@@ -616,7 +649,6 @@
             document.body.removeChild(tempInput);
         }
 
-        // Handle Send Arrow Click -> Submit directly via Formspree AJAX
         async function handleSendEmail(event) {
             event.preventDefault();
             const senderName = document.getElementById('sender-name').value.trim();
@@ -632,7 +664,6 @@
             const btnText = document.getElementById('send-btn-text');
             const btnIcon = document.getElementById('send-btn-icon');
 
-            // Loading state
             sendBtn.disabled = true;
             btnText.textContent = "Sending...";
             btnIcon.className = "fa-solid fa-spinner fa-spin text-xs";
